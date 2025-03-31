@@ -1,0 +1,79 @@
+GitHub
+    Commitar codigo:
+        git add .
+        git commit -m "Comentario sobre o que foi feito"
+        git push
+
+yarn
+    Instalar bibliotecas
+        yarn
+
+    Instalar novas bibliotecas
+        yarn add "nome da biblioteca"
+
+    Instalar dependencias de dev:
+        yarn add -d "nome da biblioteca"
+
+    Instalar de forma global na maquina:
+        yarn add -g "nome da biblioteca"
+
+    Remover biblioteca:
+        yarn remove "nome da biblioteca"
+
+Migrations:
+    Criar migration:
+        yarn typeorm migration:create -n "nome da Migration"
+
+    Executar Migration:
+        yarn typeorm migration:run
+
+    Reverter Migration:
+        yarn typeorm migration:revert
+
+Metodologia:
+    POST: Criar novos recursos. Não idempotente.
+    Exemplo:POST /users HTTP/1.1
+            Host: example.com
+            Content-Type: application/json
+
+            {
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+            }
+
+    PUT: Atualizar ou criar recursos específicos. Idempotente.
+    Exemplo:
+    PUT /users/123 HTTP/1.1
+            Host: example.com
+            Content-Type: application/json
+
+            {
+            "id": 123,
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+            }
+
+    GET: Recuperar dados. Seguro e idempotente.
+    Exemplo:
+            GET /users/123 HTTP/1.1
+            Host: example.com
+
+    DELETE: Remover recursos. Idempotente.
+    Exemplo:
+            DELETE /users/123 HTTP/1.1
+            Host: example.com
+
+    PATCH: Modificar parcialmente recursos. Não idempotente.
+    Exemplo:
+    PATCH /users/123 HTTP/1.1
+Host: example.com
+            Content-Type: application/json
+
+            {
+            "email": "new.email@example.com"
+            }
+
+    OPTIONS: Consultar métodos suportados. Usado para CORS e verificação de métodos.
+    Exemplo:
+            OPTIONS /users HTTP/1.1
+            Host: example.com
