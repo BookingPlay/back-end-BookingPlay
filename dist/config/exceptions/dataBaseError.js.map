@@ -1,1 +1,0 @@
-{"version":3,"file":"dataBaseError.js","sourceRoot":"","sources":["../../../src/config/exceptions/dataBaseError.ts"],"names":[],"mappings":";;;AAAA,yCAAsC;AAEtC,MAAa,aAAc,SAAQ,mBAAQ;IACzC,YAAY,OAAe,EAAE,aAAqB;QAChD,KAAK,CAAC,OAAO,EAAE,GAAG,EAAE,aAAa,CAAC,CAAC;IACrC,CAAC;CACF;AAJD,sCAIC"}
